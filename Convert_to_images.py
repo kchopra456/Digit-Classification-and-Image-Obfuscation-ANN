@@ -29,7 +29,7 @@ def main():
 
         image_array=X[x,:]
         image_array=image_array.reshape((20,20))
-        image_array=image_array.transpose()
+      #  image_array=image_array.transpose()
       #  print image_array.shape
 
         # print "Saving Image "+str(x)+"..."

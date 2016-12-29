@@ -69,8 +69,6 @@ def main():
     for record in range(0,Y.shape[0]):
         Ymod[record,Y[record,0]%10]=1
 
-
-
     ''' ###  Train and Test Set     ### '''
 
     X,Ymod=shuffle(X,Ymod)

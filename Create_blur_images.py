@@ -25,7 +25,7 @@ def main():
             image=Image.open("./Images Dataset/Images/output"+str(rec)+".jpg")
             #blur_image=image.filter(ImageFilter.BLUR)
             blur_image=image.filter(ImageFilter.GaussianBlur(radius=2)) # Set the blur radius.
-            #Image._show(blur_image)
+            blur_image.save('./Images Dataset/Images_blur/output'+str(rec)+'.jpg')
 
             pix_val= list(blur_image.getdata())     # Get the pixel densities from the blurred image.
             x=np.matrix(pix_val)
@@ -56,7 +56,7 @@ def main():
 
     ''' @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ '''
 
-    scio.savemat("data_blur.mat",{"X":X,"Y":Y})
+    scio.savemat("data_blur.mat",{"X":X,"y":Y})
 
     print "Blurring Action complete..."
 

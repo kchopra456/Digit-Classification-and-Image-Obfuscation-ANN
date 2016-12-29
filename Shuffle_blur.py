@@ -27,7 +27,7 @@ def main():
         X=np.matrix(data['X'])
         X=np.append(np.ones((X.shape[0],1)),X,axis=1) #Adding the bias units (feature/pixel) to the input data (input layer).
 
-        Y=np.matrix(data['Y'])
+        Y=np.matrix(data['y'])
 
     except:
         print 'Error encountered in Shuffle_blur...'

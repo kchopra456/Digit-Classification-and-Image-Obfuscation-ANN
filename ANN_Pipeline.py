@@ -65,7 +65,7 @@ def main():
         X=np.matrix(dataX['X'])
         X=np.append(np.ones((X.shape[0],1)),X,axis=1)   # Add the bias units to the input layer for ANN.
 
-        dataY=scio.loadmat('ex4data1')                  # Y is the actual digit values i.e. 0-9.
+        dataY=scio.loadmat('image_dataset')                  # Y is the actual digit values i.e. 0-9.
         Y=np.matrix(dataY['y'])
 
         ''' @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ '''
